@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task list</title>
+    {% load static %}
+    <link rel="shortcut icon"  href="{% static "icons/nouvelle-tache.png" %}">
+    <link rel="stylesheet" href="{% static "css/list_task.css" %}">
+</head>
+<body>
+<div class="table">
+    
+  <h1>Task List</h1> 
+        {% for task in tasks %}
+       
+            <li calss="task">{{ task.name }} <a href="{% url 'edit' task.id %}"><img src="{% static "icons/crayon.png" %}" alt="icons" width="20px" height="20px"></a>
+            <div class="details">
+                 <p><h3> {{ task.name }}</h3></p>
+              
+                 <p><img src="{% static "icons/description.png" %}" alt="icons" width="20px" height="20px"> {{ task.description }}</p>
+                
+                 <p><img src="{% static "icons/chronometre.png" %}" alt="icons" width="22px" height="22px"> {{ task.schedule_date }}</p>
+                 
+                 <p> <img src="{% static "icons/temps-dhorloge.png" %}" alt="icons" width="20px" height="20px"> {{ task.due_date }}</p>
+             </div>
+            </li>  
+        {% endfor %}
+        <a href="{% url "add" %}"><button type="submit">+</button></a>
+
+</div>
+</body>
+</html>

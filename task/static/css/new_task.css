@@ -1,0 +1,69 @@
+body{
+    background: linear-gradient(to right, rgb(169, 29, 29), black);
+    overflow: hidden;
+}
+
+label{
+    display: none;
+}
+form{
+    width: 700px;
+    height: 520px;
+    margin: auto;
+    padding: 5px;
+    padding-right: 10px;
+    box-shadow: -2px 2px 0px 0px;
+    border-radius: 30px;
+
+}
+
+input[name="name"]{
+    background-color: transparent;
+    height: 70px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 25px;
+    color: white;
+
+}
+
+textarea{
+    background-color: transparent;
+    height: 200px;
+    width: 700px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+input[type="date"]{
+    background-color: rgba(190, 165, 165, 0.271);
+    border: 0px;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    padding: 5px;
+    margin: 20px;
+    display: flex;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+button{
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);  
+    border: 0px;
+    float: right;
+    color: white;
+
+}
+
+
