@@ -5,13 +5,18 @@
     <title>New Task</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "css/new_task.css" %}">
-    <link rel="shortcut icon"  href="{% static "icons/nouvelle-tache.png" %}">
+    <link rel="shortcut icon"  href="{% static "icons/nouvelle-tache .png" %}">
 </head>
 <body>
 
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        {% if form.non_field_errors %}
+            <div class="error">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
         <button type="submit">Save</button>
     </form>
 

@@ -17,7 +17,8 @@
         {% for task in tasks %}
        
             <li calss="task">{{ task.name }} <a href="{% url 'edit' task.id %}"><img src="{% static "icons/crayon.png" %}" alt="icons" width="20px" height="20px"></a>
-            <div class="details">
+                                             <a href="{% url 'delete' task.id %}"><img src="{% static "icons/supprimer.png" %}" alt="icons" width="20px" height="20px"></a>
+                <div class="details">
                  <p><h3> {{ task.name }}</h3></p>
               
                  <p><img src="{% static "icons/description.png" %}" alt="icons" width="20px" height="20px"> {{ task.description }}</p>

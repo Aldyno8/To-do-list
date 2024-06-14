@@ -11,7 +11,7 @@ class Task(models.Model):
     created_date = models.DateField(auto_now_add=True)
     closed = models.BooleanField(default=False)
     due_date = models.DateField(null=True)
-    schedule_date = models.DateField(default=datetime.now()+timedelta(days=7))
+    schedule_date = models.DateField(default=datetime.now())
 
     def __str__(self):
         return self.name
